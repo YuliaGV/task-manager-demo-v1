@@ -1,0 +1,51 @@
+<form (ngSubmit)="submit()" #form="ngForm" class="mat-typography">
+  <div class="form-container">
+    
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Título</mat-label>
+      <input matInput [(ngModel)]="title" name="title" required />
+      <mat-error
+        *ngIf="
+          form.controls['title']?.invalid && form.controls['title']?.touched
+        "
+      >
+        El título es requerido
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Fecha límite (opcional)</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [(ngModel)]="dueDate"
+        name="dueDate"
+      />
+      <mat-datepicker-toggle
+        matIconSuffix
+        [for]="picker"
+      ></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Prioridad</mat-label>
+      <mat-select [(ngModel)]="priority" name="priority">
+        <mat-option value="low">Baja</mat-option>
+        <mat-option value="medium">Media</mat-option>
+        <mat-option value="high">Alta</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="form.invalid"
+      >
+        Agregar tarea
+      </button>
+    </div>
+  </div>
+</form>

@@ -9,8 +9,7 @@ const routes: Routes = [
       import('./tasks/tasks.module').then((m) => m.TasksModule),
   },
   { path: '', component: HomePageComponent },
-  { path: '**', redirectTo: '' }
-    
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
