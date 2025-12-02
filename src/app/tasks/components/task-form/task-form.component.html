@@ -1,7 +1,7 @@
 <form (ngSubmit)="submit()" #form="ngForm" class="mat-typography">
   <div class="form-container">
     
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Título</mat-label>
       <input matInput [(ngModel)]="title" name="title" required />
       <mat-error
@@ -13,7 +13,7 @@
       </mat-error>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Fecha límite (opcional)</mat-label>
       <input
         matInput
@@ -28,7 +28,7 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-    <mat-form-field appearance="outline" class="full-width">
+    <mat-form-field appearance="outline">
       <mat-label>Prioridad</mat-label>
       <mat-select [(ngModel)]="priority" name="priority">
         <mat-option value="low">Baja</mat-option>

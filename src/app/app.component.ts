@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   sidenav!: MatSidenav;
 
   constructor( private observer: BreakpointObserver) {
-
   }
 
   ngOnInit(): void {

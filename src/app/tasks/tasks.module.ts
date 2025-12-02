@@ -8,20 +8,19 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 
 import { TasksPageComponent } from './tasks-page/tasks-page.component';
 import { TaskFormComponent } from './components/task-form/task-form.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
-import { TaskItemComponent } from './components/task-item/task-item.component';
 
 
 @NgModule({
   declarations: [
     TasksPageComponent,
     TaskFormComponent,
-    TaskListComponent,
-    TaskItemComponent,
+    TaskListComponent
   ],
   imports: [
     CommonModule,
@@ -33,7 +32,8 @@ import { TaskItemComponent } from './components/task-item/task-item.component';
     MatDatepickerModule,
     MatNativeDateModule,
     MatButtonModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatIconModule
   ]
 })
 export class TasksModule {}

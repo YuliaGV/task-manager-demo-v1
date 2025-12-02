@@ -9,8 +9,8 @@ import { Task } from '../../models/task.model';
 export class TaskFormComponent {
 
   // These properties are used to bind the form fields to the component
-  title = '';
-  dueDate = '';
+  title: string = '';
+  dueDate:  Date | null = null;
   priority: Task['priority'] = 'medium';
  
   
@@ -31,7 +31,7 @@ export class TaskFormComponent {
 
 
     this.title = '';
-    this.dueDate = '';
+    this.dueDate = null;
     this.priority = 'medium';
   }
 

@@ -15,7 +15,7 @@ export class TasksPageComponent {
     this.tasks = stored ? JSON.parse(stored).map((t: any) => ({
       ...t,
       createdAt: new Date(t.createdAt),
-      dueDate: new Date(t.dueDate)
+      dueDate: t.dueDate ? new Date(t.dueDate) : undefined
     })) : [];
   }
 

@@ -1,8 +1,8 @@
-<app-task-form (add)="addTask($event)"></app-task-form>
-
-
-<app-task-list 
-  [tasks]="tasks"
-  (toggle)="toggleComplete($event)"
-  (delete)="deleteTask($event)">
-</app-task-list>
+<div class="tasks-page">
+  <app-task-form (add)="addTask($event)"></app-task-form>
+  <app-task-list 
+    [tasks]="tasks"
+    (toggle)="toggleComplete($event)"
+    (delete)="deleteTask($event)">
+  </app-task-list>
+</div>
